@@ -7,7 +7,6 @@ const Month = () => {
     const currentMonth = new Date().getMonth()
     const totalDaysInMonth = (y, m) => new Date(y, m, 0).getDate()
     const firstOfMonth = new Date(months[currentMonth]+ "1, 2022").getDay()
-    console.log(firstOfMonth)
     return (
         <div>
             <h3>{months[currentMonth]}</h3>
