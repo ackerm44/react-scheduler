@@ -1,8 +1,11 @@
+.calendar-timeslot-wrapper {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
 .day-header-wrapper {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  /* height: 3em;
-  font-weight: bold; */
 }
 .day-header {
   height: 3em;
