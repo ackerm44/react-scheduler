@@ -1,9 +1,57 @@
 {
-  "timeSlots": [
+  "scheduledTimeSlots": [
     {
-      "id": "2022061309001000",
-      "scheduled" : 0
-      
+      "id": 1,
+      "timeSlot": "2022062009001000",
+      "user": {
+        "name": "Amanda Ackerman",
+        "phone": "555-000-1234",
+        "email": "test@example.com"
+      }
+    }
+  ],
+  "standardTimeRanges": [
+    {
+      "id": 1,
+      "dayOfWeek": 0,
+      "timeStart": 0,
+      "timeEnd": 0
+    },
+    {
+      "id": 2,
+      "dayOfWeek": 1,
+      "timeStart": "0900",
+      "timeEnd": "1700"
+    },
+    {
+      "id": 3,
+      "dayOfWeek": 2,
+      "timeStart": "1000",
+      "timeEnd": "1500"
+    },
+    {
+      "id": 4,
+      "dayOfWeek": 3,
+      "timeStart": "0900",
+      "timeEnd": "1700"
+    },
+    {
+      "id": 5,
+      "dayOfWeek": 4,
+      "timeStart": "0800",
+      "timeEnd": "1900"
+    },
+    {
+      "id": 6,
+      "dayOfWeek": 5,
+      "timeStart": "1000",
+      "timeEnd": "1500"
+    },
+    {
+      "id": 7,
+      "dayOfWeek": 6,
+      "timeStart": "1000",
+      "timeEnd": "1400"
     }
   ]
 }
