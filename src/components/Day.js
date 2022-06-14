@@ -1,14 +1,21 @@
+import {useState} from 'react'
+import {getTimeSlots} from '../api/timeSlotsAPI'
 
-const Day = ({i, date, firstOfMonth}) => {
-    const firstDay = date == 0 ? firstOfMonth + 1 : 'unset'
-    const actualDate = date + 1
+
+const Day = ({dayOfMonth, year, month, firstOfMonthOffset}) => {
+    const [timeSlots, setTimeSlots] = useState([])
+    const firstDay = dayOfMonth === 1 ? firstOfMonthOffset + 1 : 'unset'
+    const dayOfWeek = new Date(month + " "+ dayOfMonth + ", "+year).getDay() + 1
     return (
         <div
             className="calendar-date" 
             style={{gridColumnStart : firstDay}}
-            onClick={(e) => {console.log(actualDate)}}
+            onClick={async () => {
+                let slots = await getTimeSlots(dayOfWeek)
+                setTimeSlots(slots)
+            }}
         >
-            {actualDate}
+            {dayOfMonth}
         </div>
     )
 }

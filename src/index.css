@@ -23,3 +23,16 @@
   margin: 0.25em;
   cursor: pointer;
 }
+
+.timeSlot {
+  display: flex;
+  flex-direction: column;
+  background: lightgray;
+  padding: 0 1em;
+  margin: 1em;
+}
+
+.timeSlot form {
+  display: flex;
+  flex-direction: column;
+}

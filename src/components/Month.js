@@ -1,12 +1,12 @@
 import Day from './Day'
 import DayHeader from './DayHeader'
 
-const Month = () => {
+const Month = ({year}) => {
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August']
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
     const currentMonth = new Date().getMonth()
     const totalDaysInMonth = (y, m) => new Date(y, m, 0).getDate()
-    const firstOfMonth = new Date(months[currentMonth]+ "1, 2022").getDay()
+    const firstOfMonthOffset = new Date(months[currentMonth]+ "1, "+year).getDay()
     return (
         <div>
             <h3>{months[currentMonth]}</h3>
@@ -15,8 +15,8 @@ const Month = () => {
             </div>
             <div className="dates-wrapper">
                 {
-                    [...Array(totalDaysInMonth(2022, currentMonth +1))].map((x, i) =>
-                        <Day key={i} date={i} firstOfMonth={firstOfMonth}/>
+                    [...Array(totalDaysInMonth(year, currentMonth +1))].map((x, i) =>
+                        <Day key={i+1} dayOfMonth={i+1} year={year} month={currentMonth + 1} firstOfMonthOffset={firstOfMonthOffset}/>
                     )
                 }
             </div>

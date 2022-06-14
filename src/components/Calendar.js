@@ -1,10 +1,10 @@
 import Month from './Month'
 
 const Calendar = () => {
-
+    const year = new Date().getFullYear();
   return (
     <section className="calendar">
-        <Month />
+        <Month year={year}/>
     </section>
   )
 }
