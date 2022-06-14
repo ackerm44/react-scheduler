@@ -33,7 +33,26 @@
 }
 
 .timeSlot form {
-  display: flex;
+  display: none;
   flex-direction: column;
   padding: 1em 0;
+}
+
+.timeSlots-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 90vw;
+  max-width: 400px;
+  background: #5e7970;
+}
+
+.timeSlot-title {
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+
+.visibile-flex {
+  display: flex !important;
 }
