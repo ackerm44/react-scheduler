@@ -19,6 +19,7 @@ const TimeSlot = ({slot}) => {
             <input type="tel"></input>
             <label>Email: </label>
             <input type="email"></input>
+            <input type="submit"></input>
         </form>
     </div>
   )

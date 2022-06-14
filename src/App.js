@@ -8,7 +8,6 @@ function App() {
       <Header/>
       <section className="calendar-timeslot-wrapper">
         <Calendar />
-        <TimeSlots />
       </section>
     </div>
   );

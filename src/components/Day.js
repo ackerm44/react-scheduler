@@ -1,5 +1,6 @@
 import {useState} from 'react'
 import {getTimeSlots} from '../api/timeSlotsAPI'
+import TimeSlots from './TimeSlots'
 
 
 const Day = ({dayOfMonth, year, month, firstOfMonthOffset}) => {
@@ -16,6 +17,7 @@ const Day = ({dayOfMonth, year, month, firstOfMonthOffset}) => {
             }}
         >
             {dayOfMonth}
+            <TimeSlots  timeSlots={timeSlots}/>
         </div>
     )
 }
