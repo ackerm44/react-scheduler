@@ -1,4 +1,4 @@
-.calendar-timeslot-wrapper {
+.calendar-timeSlot-wrapper {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
 }
@@ -39,11 +39,8 @@
 }
 
 .timeSlots-wrapper {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 90vw;
-  max-width: 400px;
+  display: flex;
+  flex-direction: column;
   background: #5e7970;
 }
 
@@ -53,6 +50,11 @@
   align-items: center;
 }
 
-.visibile-flex {
+.visible-flex {
   display: flex !important;
+}
+
+.calendar-controls {
+  display: flex;
+  justify-content: space-between;
 }

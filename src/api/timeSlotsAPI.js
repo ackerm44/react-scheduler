@@ -12,9 +12,14 @@ export const generateTimeSlots = (timeRange) => {
     for (let i=parseInt(timeRange.timeStart); i<=parseInt(timeRange.timeEnd); i+=100) {
         a.push(i)
     }
-    let timeSlots = a.map((value, i, a) => [value, a[i+1]])
+    let timeSlots = a.map((value, i, a) => {
+        if (a[i+1]) {
+          return [value, a[i+1]]
+        }
+        return []
+    })
+    timeSlots.pop()
     return timeSlots
-    // let timeSlotArray
 }
 
 export const getTimeSlots = async (id) => {

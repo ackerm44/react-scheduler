@@ -1,13 +1,11 @@
 {
-  "scheduledTimeSlots": [
+  "appointments": [
     {
-      "id": 1,
-      "timeSlot": "2022062009001000",
-      "user": {
-        "name": "Amanda Ackerman",
-        "phone": "555-000-1234",
-        "email": "test@example.com"
-      }
+      "name": "Amanda Ackerman",
+      "phone": "111-222-3333",
+      "email": "aa@example.com",
+      "timeSlot": "2022-6-30T11:00:00Z",
+      "id": 1
     }
   ],
   "standardTimeRanges": [
